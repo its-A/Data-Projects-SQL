@@ -1,0 +1,21 @@
+CREATE TABLE store (id INTEGER PRIMARY KEY, item TEXT, price INTEGER, description TEXT, available TEXT);
+INSERT INTO store VALUES  (1, "Bike", 150.00, "All Terrain", "Yes");
+INSERT INTO store VALUES (2, "Front Tire", 50.00, "All Terrain", "Yes");
+INSERT INTO store VALUES(3, "Back Tire", 50.00, "All Terrain", "Yes");
+INSERT INTO store VALUES(4, "Handle Bars", 80.00, "Wide Grip", "Yes");
+INSERT INTO store VALUES(5, "Handle Bars", 80.00, "Short Grip", "Yes");
+INSERT INTO store VALUES(6, "Seat", 50.00, "Soft/Wide", "Yes");
+INSERT INTO store VALUES(7, "Seat", 50.00, "Soft/Narrow", "No");
+INSERT INTO store VALUES(8, "Seat", 50.00, "Hard/Wide", "Yes");
+INSERT INTO store VALUES(9, "Seat", 50.00, "Hard/Narrow", "No");
+INSERT INTO store VALUES(10, "Helmet", 85.00, "Black", "Yes");
+INSERT INTO store VALUES(11, "Helmet", 80.00, "Yellow", "Yes");
+INSERT INTO store VALUES(12, "Bike Shoes", 50.00, "True to Size", "Yes");
+INSERT INTO store VALUES(13, "Elbow Pads", 35.00, "One Size", "Yes");
+INSERT INTO store VALUES(14, "Riding Gear", 100.00, "Order to Size", "Yes");
+INSERT INTO store VALUES(15, "Riding Snacks", 25.00, "Variety Pack", "Yes");
+
+SELECT * FROM store
+WHERE price > 50
+
+
