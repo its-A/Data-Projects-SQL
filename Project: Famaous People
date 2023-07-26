@@ -1,0 +1,34 @@
+/*In this project, I made my own tables of famous actors and movies they were in*/
+
+/*Creating the table of actors*/
+CREATE TABLE Actors (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    fullname TEXT,
+    age INTEGER,
+    nationality TEXT);
+    
+INSERT INTO Actors (fullname, age, nationality) VALUES ("Robert Downey Jr.", 58, "US");
+INSERT INTO Actors (fullname, age, nationality) VALUES ("Chris Hemsworth", 39, "Australia");
+INSERT INTO Actors (fullname, age, nationality) VALUES ("Tom Holland", 27, "UK");
+INSERT INTO Actors (fullname, age, nationality) VALUES ("Jennifer Lopez", 54, "US");
+INSERT INTO Actors (fullname, age, nationality) VALUES ("Anne hathaway", 40, "US");
+
+/*Creating a table of they movies the actors were in*/
+CREATE table Movies  (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    actors_id INTEGER,
+    movie TEXT,
+    year TEXT);
+    
+INSERT INTO Movies (actors_id, movie,year) VALUES (1, "Iron Man", "2008");
+INSERT INTO Movies (actors_id, movie,year) VALUES (2, "Thor", "2011");
+INSERT INTO Movies (actors_id, movie,year) VALUES (3, "Spider-Man: Homecoming", "2017");
+INSERT INTO Movies (actors_id, movie,year) VALUES (4, "Maid in Manhattan", "2002");
+INSERT INTO Movies (actors_id, movie,year) VALUES (5, "bride wars", "2009");
+
+
+/*Return Actor full name, movie they were in and what year the movie came out by joining both tables*/
+SELECT actors.fullname,movies.movie,movies.year
+FROM Actors
+JOIN movies
+ON actors.id = movies.actors_id;
