@@ -1,4 +1,5 @@
-/*In this SQL I'm querying a database with multiple tables in it to quantify statistics about customer and order data. */
+/*In this SQL Project I'm querying a database with multiple tables 
+to quantify statistics about customer and order data. */
 
 /*What columns are in the customers table?*/
 SELECT * FROM BIT_DB.customers LIMIT 20
