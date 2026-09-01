@@ -1,6 +1,7 @@
---SQL Challenges
---Challenge 1 Find all transactions that exist in both systems. Show transaction_id, product, sds_amount, irecon_amount, and the dollar difference.
--- INNER JOIN 
+--Used the irecon_decisions.csv & sds_decisions.csv self fabricaated data to explore
+--TASK 1: Find all transactions that exist in both systems. 
+--Show transaction_id, product, sds_amount, irecon_amount, and the dollar difference.
+
 SELECT
     s.transaction_id,
     s.product_name,
@@ -8,10 +9,16 @@ SELECT
     i.amount    AS irecon_amount,
     (s.amount - i.amount) AS amount_diff
 FROM       sds    s
-INNER JOIN irecon i
+INNER JOIN irecon i			
     ON s.transaction_id = i.transaction_id;
 
---Challenge 2: find all SDS transactions that are missing from iRecon
+--In order to shows transactions that exists in both systems
+--I deviced to use an INNER JOIN to combine rows from multiple tables based on a shared column (s)
+--this would return only the records that have matching values in both tables. 
+
+--TASK 2: find all SDS transactions that are missing from iRecon
+--in order to do this, im using a LEFT JOIN
+--this way I am able to retrieve all records from the SDS table, regardless of whether they have a matching record in the iRecon table
 SELECT
 	s.transaction_id,
 	s.product_name,
@@ -23,13 +30,14 @@ LEFT JOIN irecon i
 WHERE i.transaction_id IS NULL;
 
 
--- Challenge 3 — FULL OUTER JOIN (Intermediate)
---Write the complete reconciliation query. Classify every transaction as:
+-- Task 3 — Write the complete reconciliation query. Classify every transaction as:
 -- Match
 -- Missing in iRecon
 -- Missing in SDS
 -- Amount Mismatch
 -- Decision Mismatch
+--In order to do this, i decided to use FULL OUTER JOIN 
+--Since I need a complete, unfiltered view of the two datasets that ensures no data is deleted or omitted from either side, regardless of whether a match exists
 
 SELECT
     COALESCE(s.transaction_id, i.transaction_id) AS transaction_id,
@@ -50,8 +58,7 @@ FULL OUTER JOIN irecon i
     ON s.transaction_id = i.transaction_id
 ORDER BY recon_status;
 
---Challenge 4 — CTE (Intermediate)
---Using a CTE, classify all transactions then summarize the count and total dollar impact per mismatch type.
+--Task 4 Use a CTE, to classify all transactions then summarize the count and total dollar impact per mismatch type.
 
 WITH recon_classified AS (
     SELECT
@@ -79,8 +86,8 @@ GROUP BY recon_status
 ORDER BY record_count DESC;
 
 
---Challenge 5 — Window Functions (Advanced)
---For each product, show total mismatches, rank by mismatch count, and flag if above average.
+--Task 5 — Using a Window Function
+--For each product, show total mismatches, rank by mismatch count, and flag if above or below average.
 
 WITH mismatches AS (
     SELECT
