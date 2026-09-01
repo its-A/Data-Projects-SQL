@@ -16,7 +16,7 @@ ORDER BY fraud_count DESC;
 
 --TASK 2: Find all fraudulent transactions where the account is less than 30 days old 
 --the highest risk segment.
---Filtering + JOIN Pattern (Beginner)
+--Filtering + JOIN Pattern 
 SELECT
     transaction_id,
     product_name,
@@ -59,7 +59,7 @@ ORDER BY fraud_rate_pct DESC;
 
 
 --TASK 4:Rank fraud types by total dollar amount lost, and show each type's share of total fraud losses.
---Using RANK + Window Functions (Intermediate)
+--Using RANK + Window Functions 
 
 WITH fraud_by_type AS (
     SELECT
@@ -82,7 +82,7 @@ ORDER BY amount_rank;
 
 
 --TASK 5: Show daily fraud counts and flag days where fraud spiked more than 20% compared to the previous day.
--- LAG + Daily Trend (Advanced)
+-- LAG + Daily Trend 
 
 WITH daily_fraud AS (
     SELECT
@@ -118,7 +118,7 @@ ORDER BY transaction_date;
 
 
 --TASK 6: For each product and device type combination, show fraud rate, rank, running total of fraud amount, and risk classification.
---Full Analysis Query (Advanced)
+--Full Analysis Query 
 
 WITH device_product_stats AS (
     SELECT
