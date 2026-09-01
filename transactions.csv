@@ -1,0 +1,36 @@
+transaction_id,product_name,amount,transaction_date,customer_id,region,is_fraud,fraud_type,device_type,account_age_days
+TXN-2001,Apple Cash,2500.00,2026-07-01,CUST-601,US,1,Unauthorized Transfer,iPhone,12
+TXN-2002,App Store,199.99,2026-07-01,CUST-602,US,0,,iPad,450
+TXN-2003,Apple Cash,3800.00,2026-07-01,CUST-603,US,1,Account Takeover,iPhone,8
+TXN-2004,Apple TV+,14.99,2026-07-02,CUST-604,US,0,,Mac,820
+TXN-2005,Apple Music,10.99,2026-07-02,CUST-605,US,0,,iPhone,365
+TXN-2006,Apple Cash,1500.00,2026-07-02,CUST-606,US,1,Unauthorized Transfer,iPhone,5
+TXN-2007,App Store,49.99,2026-07-02,CUST-607,US,0,,iPad,210
+TXN-2008,Apple Cash,4200.00,2026-07-03,CUST-608,US,1,Account Takeover,iPhone,3
+TXN-2009,iCloud+,9.99,2026-07-03,CUST-609,US,0,,Mac,540
+TXN-2010,Apple Arcade,6.99,2026-07-03,CUST-610,US,0,,iPhone,180
+TXN-2011,Apple Cash,890.00,2026-07-04,CUST-611,US,1,Friendly Fraud,iPhone,22
+TXN-2012,App Store,9.99,2026-07-04,CUST-612,US,0,,iPad,730
+TXN-2013,Apple Music,10.99,2026-07-04,CUST-613,US,0,,iPhone,290
+TXN-2014,Apple Cash,6700.00,2026-07-05,CUST-614,US,1,Unauthorized Transfer,iPhone,7
+TXN-2015,Apple TV+,14.99,2026-07-05,CUST-615,US,0,,Mac,615
+TXN-2016,App Store,2.99,2026-07-05,CUST-616,US,0,,iPhone,420
+TXN-2017,Apple Cash,1100.00,2026-07-06,CUST-617,US,1,Account Takeover,iPhone,14
+TXN-2018,iCloud+,2.99,2026-07-06,CUST-618,US,0,,iPad,880
+TXN-2019,Apple Arcade,4.99,2026-07-06,CUST-619,US,0,,iPhone,330
+TXN-2020,Apple Cash,3300.00,2026-07-07,CUST-620,US,1,Unauthorized Transfer,iPhone,9
+TXN-2021,App Store,19.99,2026-07-07,CUST-621,US,0,,Mac,560
+TXN-2022,Apple Music,10.99,2026-07-07,CUST-622,US,0,,iPhone,415
+TXN-2023,Apple Cash,750.00,2026-07-08,CUST-623,US,1,Friendly Fraud,iPhone,18
+TXN-2024,Apple TV+,14.99,2026-07-08,CUST-624,US,0,,iPad,670
+TXN-2025,App Store,7.99,2026-07-08,CUST-625,US,0,,iPhone,245
+TXN-2026,Apple Cash,2900.00,2026-07-09,CUST-626,US,1,Account Takeover,iPhone,6
+TXN-2027,iCloud+,9.99,2026-07-09,CUST-627,US,0,,Mac,790
+TXN-2028,Apple Arcade,6.99,2026-07-09,CUST-628,US,0,,iPhone,155
+TXN-2029,Apple Cash,4500.00,2026-07-10,CUST-629,US,1,Unauthorized Transfer,iPhone,4
+TXN-2030,App Store,0.99,2026-07-10,CUST-630,US,0,,iPad,920
+TXN-2031,Apple Music,10.99,2026-07-10,CUST-631,US,0,,iPhone,380
+TXN-2032,Apple Cash,1800.00,2026-07-10,CUST-632,US,1,Friendly Fraud,iPhone,16
+TXN-2033,Apple TV+,14.99,2026-07-10,CUST-633,US,0,,Mac,510
+TXN-2034,App Store,4.99,2026-07-10,CUST-634,US,0,,iPhone,275
+TXN-2035,Apple Cash,5100.00,2026-07-10,CUST-635,US,1,Account Takeover,iPhone,11
